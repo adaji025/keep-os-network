@@ -39,8 +39,8 @@ export function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-neutral-100 bg-white">
-      <div className="app-width flex h-16 items-center justify-between gap-2 px-3 sm:gap-4 sm:px-6 lg:px-8">
-        <Link href="/" className="flex min-w-0 shrink-0 items-center gap-2 sm:gap-3">
+      <div className="app-width flex h-16 items-center justify-between gap-2 px-3 sm:gap-4 sm:px-6 md:grid md:grid-cols-[1fr_auto_1fr] md:items-center lg:px-8">
+        <Link href="/" className="flex min-w-0 items-center gap-2 justify-self-start sm:gap-3">
           <div
             className="size-9 shrink-0 rounded-full bg-neutral-200 sm:size-10"
             aria-hidden
@@ -49,7 +49,7 @@ export function Navbar() {
         </Link>
 
         <nav
-          className="hidden items-center gap-8 text-sm font-medium text-neutral-700 md:flex"
+          className="hidden items-center justify-center gap-8 text-sm font-medium text-neutral-700 md:flex"
           aria-label="Main"
         >
           {NAV_LINKS.map(({ href, label }) => (
@@ -63,10 +63,10 @@ export function Navbar() {
           ))}
         </nav>
 
-        <div className="flex shrink-0 items-center gap-1 sm:gap-2 md:gap-3">
+        <div className="flex items-center justify-self-end gap-1 sm:gap-2 md:gap-3">
           <div className="hidden items-center gap-1.5 rounded-full border border-primary/40 bg-primary/12 px-3 py-1.5 text-xs font-semibold text-primary md:flex">
             <Coins className="size-3.5" aria-hidden />
-            <span>4,958 KPS</span>
+            <span className="whitespace-nowrap">4,958 KPS</span>
           </div>
           <button
             type="button"
@@ -80,7 +80,7 @@ export function Navbar() {
           </Button>
           <Button
             size="sm"
-            className="hidden rounded-lg bg-primary px-3 font-semibold text-primary-foreground shadow-sm hover:bg-primary/90 sm:inline-flex sm:px-4"
+            className="hidden h-9 rounded-lg bg-primary px-3 font-semibold text-primary-foreground shadow-sm hover:bg-primary/90 sm:inline-flex sm:px-4"
           >
             Sign Up
           </Button>

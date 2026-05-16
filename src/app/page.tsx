@@ -1,8 +1,8 @@
-import { EarnRedeemSave } from "@/components/_core/landing-pages/earn-redeem-save";
-import { HowItWorks } from "@/components/_core/landing-pages/how-works";
-import { FeaturedBusinesses } from "@/components/_core/landing-pages/featured-business";
-import { LandingHero } from "@/components/_core/landing-pages/hero";
-import { ShopByCategories } from "@/components/_core/landing-pages/shop-by-categories";
+import { EarnRedeemSave } from "@/components/_core/landing-pages/home/earn-redeem-save";
+import { HowItWorks } from "@/components/_core/landing-pages/home/how-works";
+import { FeaturedBusinesses } from "@/components/_core/landing-pages/home/featured-business";
+import { LandingHero } from "@/components/_core/landing-pages/home/hero";
+import { ShopByCategories } from "@/components/_core/landing-pages/home/shop-by-categories";
 import { Footer } from "@/components/_core/shared/footer";
 import { Navbar } from "@/components/_core/shared/navbar";
 
