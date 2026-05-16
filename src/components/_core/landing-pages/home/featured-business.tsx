@@ -274,7 +274,7 @@ export function FeaturedBusinesses() {
             className="gap-1.5 rounded-xl border-primary px-6 font-semibold text-primary hover:bg-primary/5 hover:text-primary"
             asChild
           >
-            <Link href="#">
+            <Link href="/explore">
               See All
               <ArrowRight className="size-4" aria-hidden />
             </Link>
