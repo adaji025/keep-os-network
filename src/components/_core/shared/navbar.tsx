@@ -39,7 +39,7 @@ export function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-neutral-100 bg-white">
-      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-2 px-3 sm:gap-4 sm:px-6 lg:px-8">
+      <div className="app-width flex h-16 items-center justify-between gap-2 px-3 sm:gap-4 sm:px-6 lg:px-8">
         <Link href="/" className="flex min-w-0 shrink-0 items-center gap-2 sm:gap-3">
           <div
             className="size-9 shrink-0 rounded-full bg-neutral-200 sm:size-10"
@@ -64,7 +64,7 @@ export function Navbar() {
         </nav>
 
         <div className="flex shrink-0 items-center gap-1 sm:gap-2 md:gap-3">
-          <div className="hidden items-center gap-1.5 rounded-full border border-[#4A72FF]/40 bg-[#4A72FF]/12 px-3 py-1.5 text-xs font-semibold text-[#4A72FF] md:flex">
+          <div className="hidden items-center gap-1.5 rounded-full border border-primary/40 bg-primary/12 px-3 py-1.5 text-xs font-semibold text-primary md:flex">
             <Coins className="size-3.5" aria-hidden />
             <span>4,958 KPS</span>
           </div>
@@ -80,7 +80,7 @@ export function Navbar() {
           </Button>
           <Button
             size="sm"
-            className="hidden rounded-lg bg-[#4A72FF] px-3 font-semibold text-white shadow-sm hover:bg-[#3d62e6] sm:inline-flex sm:px-4"
+            className="hidden rounded-lg bg-primary px-3 font-semibold text-primary-foreground shadow-sm hover:bg-primary/90 sm:inline-flex sm:px-4"
           >
             Sign Up
           </Button>
@@ -156,7 +156,7 @@ export function Navbar() {
               </a>
             ))}
             <div className="mt-auto border-t border-neutral-100 pt-4">
-              <div className="flex items-center gap-2 rounded-full border border-[#4A72FF]/40 bg-[#4A72FF]/12 px-3 py-2 text-sm font-semibold text-[#4A72FF]">
+              <div className="flex items-center gap-2 rounded-full border border-primary/40 bg-primary/12 px-3 py-2 text-sm font-semibold text-primary">
                 <Coins className="size-4 shrink-0" aria-hidden />
                 <span>4,958 KPS</span>
               </div>
@@ -168,7 +168,7 @@ export function Navbar() {
                 Login
               </Button>
               <Button
-                className="mt-2 w-full justify-center rounded-lg bg-[#4A72FF] font-semibold text-white hover:bg-[#3d62e6]"
+                className="mt-2 w-full justify-center rounded-lg bg-primary font-semibold text-primary-foreground hover:bg-primary/90"
                 onClick={() => setOpen(false)}
               >
                 Sign Up

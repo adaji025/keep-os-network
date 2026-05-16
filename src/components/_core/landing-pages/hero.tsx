@@ -16,7 +16,7 @@ import { Button } from "@/components/ui/button";
 const ROTATING_CATEGORIES = [
   "Restaurants",
   "Hotels",
-  "Cafés",
+  "Supermarkets",
 ] as const;
 
 const FEATURES = [
@@ -70,11 +70,11 @@ export function LandingHero() {
         </div>
 
         <div className="relative z-10 flex flex-1 flex-col px-4 pb-10 pt-12 sm:px-6 sm:pt-16 lg:px-8 lg:pt-20">
-          <div className="mx-auto flex w-full max-w-4xl flex-1 flex-col items-center text-center">
+          <div className="app-width flex w-full  flex-1 flex-col items-center text-center">
             <h1 className="text-balance text-3xl font-bold tracking-tight text-white sm:text-4xl md:text-5xl lg:text-[3.25rem] lg:leading-tight">
               Discover Amazing Places Near You
             </h1>
-            <p className="mt-2 min-h-[1.2em] text-3xl font-bold tracking-tight text-[#4A72FF] transition-all duration-500 sm:text-4xl md:text-5xl lg:text-[3.25rem]">
+            <p className="mt-2 min-h-[1.2em] text-3xl font-bold tracking-tight text-primary transition-all duration-500 sm:text-4xl md:text-5xl lg:text-[3.25rem]">
               {ROTATING_CATEGORIES[categoryIndex]}
             </p>
             <p className="mt-4 max-w-xl text-pretty text-base text-white/90 sm:text-lg">
@@ -95,7 +95,7 @@ export function LandingHero() {
                     <select
                       id="city-select"
                       defaultValue=""
-                      className="w-full cursor-pointer appearance-none rounded-md bg-transparent py-1 pr-8 text-sm font-medium text-neutral-800 outline-none focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-[#4A72FF]"
+                      className="w-full cursor-pointer appearance-none rounded-md bg-transparent py-1 pr-8 text-sm font-medium text-neutral-800 outline-none focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-primary"
                     >
                       <option value="" disabled>
                         Select City
@@ -129,7 +129,7 @@ export function LandingHero() {
 
                 <Button
                   type="button"
-                  className="h-11 shrink-0 rounded-xl bg-[#4A72FF] px-8 font-semibold text-white hover:bg-[#3d62e6] md:h-auto md:rounded-full md:px-10"
+                  className="h-11 shrink-0 rounded-xl bg-primary px-8 font-semibold text-primary-foreground hover:bg-primary/90 md:h-auto md:rounded-full md:px-10"
                 >
                   Search
                 </Button>
@@ -143,7 +143,7 @@ export function LandingHero() {
                 key={title}
                 className="flex gap-4 text-left sm:flex-col sm:gap-3 sm:text-center lg:flex-row lg:text-left"
               >
-                <div className="flex size-12 shrink-0 items-center justify-center rounded-full bg-[#4A72FF] text-white shadow-md">
+                <div className="flex size-12 shrink-0 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-md">
                   <Icon className="size-6" strokeWidth={1.75} aria-hidden />
                 </div>
                 <div>
