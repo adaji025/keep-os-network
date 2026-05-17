@@ -101,7 +101,7 @@ export const EXPLORE_BUSINESSES: Business[] = [
     imageSrc:
       "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=600&q=80",
     imageAlt: "Restaurant meal",
-    href: "#",
+    href: "/explore/restaurant/1",
     favorited: false,
     footer: { type: "open", closesAt: "11:00 PM" },
     menuItems: ["owo-soup", "jollof-rice", "suya", "pepper-soup"],
@@ -157,7 +157,7 @@ export const EXPLORE_BUSINESSES: Business[] = [
     imageSrc:
       "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=600&q=80",
     imageAlt: "Restaurant interior",
-    href: "#",
+    href: "/explore/restaurant/4",
     favorited: false,
     footer: { type: "open", closesAt: "9:30 PM" },
     menuItems: ["egusi-soup", "jollof-rice", "fried-rice", "pepper-soup"],
@@ -202,7 +202,7 @@ export const EXPLORE_BUSINESSES: Business[] = [
     imageSrc:
       "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=600&q=80",
     imageAlt: "Plated dish",
-    href: "#",
+    href: "/explore/restaurant/7",
     favorited: false,
     footer: { type: "price", label: "From ₦8,500 / meal" },
     menuItems: ["owo-soup", "pepper-soup", "amala-ewedu", "pounded-yam"],

@@ -49,7 +49,7 @@ export function ExploreBusinessCard({ business }: { business: Business }) {
       >
         <Heart
           className={cn(
-            "size-[18px]",
+            "size-4.5",
             favorited ? "fill-red-500 text-red-500" : "text-neutral-600",
           )}
           strokeWidth={favorited ? 0 : 1.75}
@@ -59,7 +59,7 @@ export function ExploreBusinessCard({ business }: { business: Business }) {
         href={href}
         className="relative flex flex-1 flex-col focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
       >
-        <div className="relative aspect-[4/3] w-full shrink-0 overflow-hidden">
+        <div className="relative aspect-4/3 w-full shrink-0 overflow-hidden">
           <Image
             src={imageSrc}
             alt={imageAlt}
