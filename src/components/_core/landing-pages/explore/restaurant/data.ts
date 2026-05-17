@@ -94,6 +94,72 @@ export function formatMenuPriceDecimal(value: number) {
   })}`;
 }
 
+export type RestaurantReview = {
+  id: string;
+  rating: number;
+  comment: string;
+  authorName: string;
+  relativeTime: string;
+  imageSrc: string;
+  imageAlt: string;
+};
+
+export type RatingDistribution = {
+  stars: number;
+  count: number;
+};
+
+const REVIEW_IMAGE =
+  "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=200&q=80";
+
+const REVIEW_COMMENT =
+  "This product is super except for the very few Apps that comes with it. It worths the money.";
+
+const REVIEW_AUTHORS = [
+  "Kathryn Murphy",
+  "Leslie Alexander",
+  "Cameron Williamson",
+  "Brooklyn Simmons",
+  "Esther Howard",
+  "Jenny Wilson",
+  "Robert Fox",
+  "Darlene Robertson",
+];
+
+const REVIEW_TIMES = [
+  "2 days ago",
+  "4 days ago",
+  "1 week ago",
+  "2 weeks ago",
+  "3 weeks ago",
+];
+
+export function getRatingDistribution(reviewCount: number): RatingDistribution[] {
+  const weights = [0.82, 0.1, 0.04, 0.02, 0.02];
+  const counts = weights.map((weight) => Math.round(reviewCount * weight));
+  const distributed = counts.reduce((sum, count) => sum + count, 0);
+  if (distributed !== reviewCount && counts[0] !== undefined) {
+    counts[0] += reviewCount - distributed;
+  }
+
+  return [5, 4, 3, 2, 1].map((stars, index) => ({
+    stars,
+    count: counts[index] ?? 0,
+  }));
+}
+
+export function getRestaurantReviews(restaurantId: string): RestaurantReview[] {
+  return Array.from({ length: 12 }, (_, index) => ({
+    id: `${restaurantId}-review-${index + 1}`,
+    rating: 5,
+    comment: REVIEW_COMMENT,
+    authorName: REVIEW_AUTHORS[index % REVIEW_AUTHORS.length] ?? "Guest",
+    relativeTime: REVIEW_TIMES[index % REVIEW_TIMES.length] ?? "Recently",
+    imageSrc: REVIEW_IMAGE,
+    imageAlt: "Plated grilled dish with garnish",
+  }));
+}
+
 export function getRestaurantStatus(footer: FooterState) {
   if (footer.type === "open") {
     return { label: `Open • Closes ${footer.closesAt}`, isOpen: true };

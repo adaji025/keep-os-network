@@ -23,6 +23,7 @@ import {
 } from "./data";
 import { MenuProductCard } from "./menu-product-card";
 import Cart from "./cart";
+import Reviews from "./reviews";
 
 type RestaurantDetailsPageProps = {
     restaurantId: string;
@@ -275,6 +276,8 @@ export function RestaurantDetailsPage({
                                 </div>
                             </div>
                         </div>
+
+
                     </div>
                     <Cart
                         cartCount={cartCount}
@@ -284,6 +287,12 @@ export function RestaurantDetailsPage({
                     />
 
                 </div>
+
+                <Reviews
+                    restaurantId={restaurantId}
+                    rating={restaurant.rating}
+                    reviewCount={restaurant.reviewCount}
+                />
             </div>
         </div>
     );
