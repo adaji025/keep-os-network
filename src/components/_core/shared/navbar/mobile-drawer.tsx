@@ -100,15 +100,25 @@ export default function MobileDrawer({
                         <Button
                             variant="outline"
                             className="mt-3 w-full justify-center"
-                            onClick={() => setOpen(false)}
+                            asChild
                         >
-                            Login
+                            <Link
+                                href="/explore/auth/login"
+                                onClick={() => setOpen(false)}
+                            >
+                                Login
+                            </Link>
                         </Button>
                         <Button
                             className="mt-2 w-full justify-center rounded-lg bg-primary font-semibold text-primary-foreground hover:bg-primary/90"
-                            onClick={() => setOpen(false)}
+                            asChild
                         >
-                            Sign Up
+                            <Link
+                                href="/explore/auth/register"
+                                onClick={() => setOpen(false)}
+                            >
+                                Sign Up
+                            </Link>
                         </Button>
                     </div>
                 </nav>

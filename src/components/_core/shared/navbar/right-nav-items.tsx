@@ -29,14 +29,20 @@ export default function RightNavItems({
       >
         <Heart className="size-5" strokeWidth={1.75} />
       </Link>
-      <Button variant="ghost" size="sm" className="hidden md:inline-flex">
-        Login
+      <Button
+        variant="ghost"
+        size="sm"
+        className="hidden md:inline-flex"
+        asChild
+      >
+        <Link href="/explore/auth/login">Login</Link>
       </Button>
       <Button
         size="sm"
         className="hidden h-9 rounded-lg bg-primary px-3 font-semibold text-primary-foreground shadow-sm hover:bg-primary/90 sm:inline-flex sm:px-4"
+        asChild
       >
-        Sign Up
+        <Link href="/explore/auth/register">Sign Up</Link>
       </Button>
       <Button
         type="button"
