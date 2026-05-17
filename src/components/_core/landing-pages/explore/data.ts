@@ -20,6 +20,7 @@ export type Business = {
   menuItems?: string[];
   amenities?: string[];
   roomTypes?: string[];
+  productCategories?: string[];
 };
 
 export const EXPLORE_TABS = [
@@ -143,9 +144,15 @@ export const EXPLORE_BUSINESSES: Business[] = [
     imageSrc:
       "https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=600&q=80",
     imageAlt: "Supermarket produce",
-    href: "#",
+    href: "/explore/supermarket/3",
     favorited: false,
     footer: { type: "open", closesAt: "10:00 PM" },
+    productCategories: [
+      "fresh-produce",
+      "beverages",
+      "household",
+      "snacks",
+    ],
   },
   {
     id: "4",
@@ -188,9 +195,15 @@ export const EXPLORE_BUSINESSES: Business[] = [
     imageSrc:
       "https://images.unsplash.com/photo-1604719312566-8912e9227c6a?auto=format&fit=crop&w=600&q=80",
     imageAlt: "Grocery aisle",
-    href: "#",
+    href: "/explore/supermarket/6",
     favorited: false,
     footer: { type: "open", closesAt: "8:00 PM" },
+    productCategories: [
+      "fresh-produce",
+      "beverages",
+      "frozen-foods",
+      "bakery",
+    ],
   },
   {
     id: "7",
@@ -244,8 +257,14 @@ export const EXPLORE_BUSINESSES: Business[] = [
     imageSrc:
       "https://images.unsplash.com/photo-1578916171728-46688e847b5b?auto=format&fit=crop&w=600&q=80",
     imageAlt: "Supermarket shelves",
-    href: "#",
+    href: "/explore/supermarket/9",
     favorited: false,
     footer: { type: "closed" },
+    productCategories: [
+      "household",
+      "snacks",
+      "beverages",
+      "frozen-foods",
+    ],
   },
 ];
