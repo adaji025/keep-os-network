@@ -11,7 +11,7 @@ import {
     getRatingDistribution,
     getRestaurantReviews,
     type RestaurantReview,
-} from "./data";
+} from "../landing-pages/explore/restaurant/data";
 
 function RatingStars({
     count,

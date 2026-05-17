@@ -23,7 +23,7 @@ import {
 } from "./data";
 import { MenuProductCard } from "./menu-product-card";
 import Cart from "./cart";
-import Reviews from "./reviews";
+import Reviews from "../../../shared/reviews";
 
 type RestaurantDetailsPageProps = {
     restaurantId: string;

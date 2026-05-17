@@ -116,7 +116,7 @@ export const EXPLORE_BUSINESSES: Business[] = [
     imageSrc:
       "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=600&q=80",
     imageAlt: "Hotel room",
-    href: "#",
+    href: "/explore/hotel/2",
     favorited: true,
     footer: { type: "price", label: "From ₦45,000 / night" },
     amenities: [
@@ -172,7 +172,7 @@ export const EXPLORE_BUSINESSES: Business[] = [
     imageSrc:
       "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=600&q=80",
     imageAlt: "Hotel exterior",
-    href: "#",
+    href: "/explore/hotel/5",
     favorited: false,
     footer: { type: "closed" },
     amenities: ["free-wifi", "gym", "free-parking", "room-service"],
@@ -217,7 +217,7 @@ export const EXPLORE_BUSINESSES: Business[] = [
     imageSrc:
       "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=600&q=80",
     imageAlt: "Hotel lobby",
-    href: "#",
+    href: "/explore/hotel/8",
     favorited: false,
     footer: { type: "open", closesAt: "12:00 AM" },
     amenities: [
