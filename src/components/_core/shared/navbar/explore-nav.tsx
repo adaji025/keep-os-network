@@ -11,11 +11,7 @@ import { GemSvg } from "../svg";
 import MobileDrawer from "./mobile-drawer";
 import RightNavItems from "./right-nav-items";
 
-const NAV_LINKS = [
-    { href: "/explore", label: "Explore" },
-    { href: "#", label: "About Us" },
-    { href: "#", label: "Contact Us" },
-] as const;
+import { NAV_LINKS } from "./nav-links";
 
 const CITIES = [
     { value: "abuja", label: "Abuja" },
@@ -138,13 +134,13 @@ export function ExploreNav() {
                             </div>
 
                             <div className="flex shrink-0 items-center gap-1">
-                                <button
-                                    type="button"
+                                <Link
+                                    href="/favourite"
                                     className="inline-flex size-10 items-center justify-center rounded-full border border-neutral-200 bg-white text-neutral-600"
-                                    aria-label="Wishlist"
+                                    aria-label="Favourites"
                                 >
                                     <Heart className="size-5" strokeWidth={1.75} />
-                                </button>
+                                </Link>
                                 <Button
                                     type="button"
                                     variant="ghost"

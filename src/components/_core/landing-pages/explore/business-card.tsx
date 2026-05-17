@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Heart, MapPin, Star } from "lucide-react";
 
 import { cn } from "@/lib/utils";
+import { useFavoritesStore } from "@/store/favorites-store";
 
 import type { Business, FooterState } from "./data";
 
@@ -28,6 +29,7 @@ function CardFooter({ footer }: { footer: FooterState }) {
 
 export function ExploreBusinessCard({ business }: { business: Business }) {
   const {
+    id,
     name,
     category,
     rating,
@@ -36,23 +38,32 @@ export function ExploreBusinessCard({ business }: { business: Business }) {
     imageSrc,
     imageAlt,
     href,
-    favorited,
     footer,
   } = business;
+
+  const isFavorite = useFavoritesStore((state) => state.isFavorite(id));
+  const toggleFavorite = useFavoritesStore((state) => state.toggle);
 
   return (
     <div className="group relative flex flex-col overflow-hidden rounded-2xl border border-neutral-200/90 bg-white shadow-sm transition-shadow hover:shadow-md">
       <button
         type="button"
         className="absolute right-3 top-3 z-10 flex size-9 items-center justify-center rounded-full bg-white/95 text-neutral-600 shadow-md backdrop-blur-sm transition-colors hover:bg-white"
-        aria-label={favorited ? "Saved to favorites" : "Add to favorites"}
+        aria-label={
+          isFavorite ? "Remove from favourites" : "Add to favourites"
+        }
+        onClick={(event) => {
+          event.preventDefault();
+          event.stopPropagation();
+          toggleFavorite(id);
+        }}
       >
         <Heart
           className={cn(
             "size-4.5",
-            favorited ? "fill-red-500 text-red-500" : "text-neutral-600",
+            isFavorite ? "fill-red-500 text-red-500" : "text-neutral-600",
           )}
-          strokeWidth={favorited ? 0 : 1.75}
+          strokeWidth={isFavorite ? 0 : 1.75}
         />
       </button>
       <Link

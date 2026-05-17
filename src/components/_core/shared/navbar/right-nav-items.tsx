@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Heart, Menu, X } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
@@ -21,13 +22,13 @@ export default function RightNavItems({
         <GemSvg />
         <span className="whitespace-nowrap">4,958 KPS</span>
       </div>
-      <button
-        type="button"
+      <Link
+        href="/favourite"
         className="inline-flex size-9 items-center justify-center rounded-full border text-neutral-600 transition-colors hover:bg-neutral-100 hover:text-neutral-900"
-        aria-label="Wishlist"
+        aria-label="Favourites"
       >
         <Heart className="size-5" strokeWidth={1.75} />
-      </button>
+      </Link>
       <Button variant="ghost" size="sm" className="hidden md:inline-flex">
         Login
       </Button>
