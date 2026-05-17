@@ -12,7 +12,7 @@ import {
     Star,
 } from "lucide-react";
 
-import { useRestaurantCart } from "@/app/store/restaurant-cart-store";
+import { useRestaurantCart } from "@/store/restaurant-cart-store";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
